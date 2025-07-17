@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  project-test-damar-galih:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: project-test-damar-galih
+    restart: unless-stopped
+    ports:
+      - "8080:80"
