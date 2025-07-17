@@ -1,9 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SlantedBanner from '@/components/banner/SlantedBanner.vue'
+
+const bannerData = {
+  imageUrl: '/src/assets/banner.jpg',
+  title: 'Ideas',
+  subtitle: 'Where all our great things begin'
+}
+</script>
 
 <template>
-  <div class="w-full min-h-screen flex items-center justify-center">
-    <h1>Welcome to the Ideas Page</h1>
-  </div>
+  <SlantedBanner
+    :imageUrl="bannerData.imageUrl"
+    :title="bannerData.title"
+    :subtitle="bannerData.subtitle"
+    :slantHeight="400"
+  />
 </template>
-
-<style scoped></style>
