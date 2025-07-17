@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SlantedBanner from '@/components/banner/SlantedBanner.vue'
+import IdeasPage from '@/pages/Ideas/IdeasPage.vue'
 
 const bannerData = {
   imageUrl: '/src/assets/banner.jpg',
@@ -15,4 +16,5 @@ const bannerData = {
     :subtitle="bannerData.subtitle"
     :slantHeight="400"
   />
+  <IdeasPage />
 </template>

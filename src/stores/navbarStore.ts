@@ -2,25 +2,32 @@ import { defineStore } from 'pinia'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 export const useNavbarStore = defineStore('navbar', () => {
-  const isVisible = ref(true)
-  const lastScrollY = ref(0)
-  const isScrollingUp = ref(false)
-  const atTopOfPage = ref(true)
+  const state = {
+    isVisible: ref(true),
+    lastScrollY: ref(0),
+    isScrollingUp: ref(false),
+    atTopOfPage: ref(true)
+  }
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY
-    isScrollingUp.value = currentScrollY < lastScrollY.value
-    atTopOfPage.value = currentScrollY <= 10
-    isVisible.value = atTopOfPage.value || isScrollingUp.value
-    lastScrollY.value = currentScrollY
+  const actions = {
+    handleScroll() {
+      const currentScrollY = window.scrollY
+      state.isScrollingUp.value = currentScrollY < state.lastScrollY.value
+      state.atTopOfPage.value = currentScrollY <= 10
+      state.isVisible.value = state.atTopOfPage.value || state.isScrollingUp.value
+      state.lastScrollY.value = currentScrollY
+    }
   }
 
   onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', actions.handleScroll)
   })
   onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
+    window.removeEventListener('scroll', actions.handleScroll)
   })
 
-  return { isVisible, isScrollingUp, atTopOfPage }
+  return {
+    ...state,
+    ...actions
+  }
 })

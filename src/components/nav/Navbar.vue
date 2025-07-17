@@ -8,7 +8,7 @@ const navbarStore = useNavbarStore()
 
 <template>
   <header
-    class="fixed top-0 left-0 w-full flex justify-around items-center px-6 py-6 z-50 transition-all duration-300 bg-primary"
+    class="fixed top-0 left-0 w-full flex justify-between items-center px-[10%] py-6 z-50 transition-all duration-300 bg-primary"
     :class="{
       'translate-y-0': navbarStore.isVisible,
       '-translate-y-full': !navbarStore.isVisible,
@@ -25,7 +25,6 @@ const navbarStore = useNavbarStore()
         />
       </router-link>
     </div>
-
     <nav class="flex items-center space-x-6">
       <NavItem v-for="item in NavItems" :key="item.path" :item="item" />
     </nav>
