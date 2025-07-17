@@ -24,7 +24,7 @@ const routes = [
       {
         path: 'ideas',
         name: 'Ideas',
-        component: () => import('@/pages/Ideas.vue')
+        component: () => import('@/pages/Ideas/Ideas.vue')
       },
       {
         path: 'careers',

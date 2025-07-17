@@ -11,5 +11,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     },
     extensions: ['.ts', '.js', '.vue', '.json']
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://suitmedia-backend.suitdev.com/',
+        changeOrigin: true,
+        rewrite: (path) => path,
+      },
+    }
   }
 })
