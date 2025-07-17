@@ -3,7 +3,7 @@ import SlantedBanner from '@/components/banner/SlantedBanner.vue'
 import IdeasPage from '@/pages/Ideas/IdeasPage.vue'
 
 const bannerData = {
-  imageUrl: '/src/assets/banner.jpg',
+  imageUrl: 'https://img.freepik.com/free-vector/illustration-startup-business_53876-9144.jpg',
   title: 'Ideas',
   subtitle: 'Where all our great things begin'
 }
