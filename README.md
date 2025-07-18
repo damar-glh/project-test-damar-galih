@@ -3,6 +3,9 @@
 
 This is a modern Vue.js project template using Vue 3, TypeScript, Vite, and Pinia for state management. The project provides a robust foundation for building scalable single-page applications.
 
+## Deployment
+This project is deployed on Vercel. You can view the live demo at [http://project-test.damar-galih.tech](http://project-test.damar-galih.tech).
+
 ## Features
 
 - Vue 3 with Composition API and <script setup>
