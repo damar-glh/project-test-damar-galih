@@ -1,11 +1,27 @@
 version: '3.8'
 
 services:
-  project-test-damar-galih:
+  project-test-frontend:
     build:
-      context: .
+      context: ./project-test
       dockerfile: Dockerfile
-    container_name: project-test-damar-galih
+    container_name: project-test-frontend
+    expose:
+      - "3000"
     restart: unless-stopped
-    ports:
-      - "8080:80"
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
+    depends_on:
+      - project-test-frontend
+    command: >
+      certbot certonly --webroot 
+      --webroot-path=/var/www/certbot 
+      --email damarmuhamad13@gmail.com 
+      --agree-tos 
+      --no-eff-email 
+      -d project-test.damar-galih.tech
