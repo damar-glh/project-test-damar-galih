@@ -1,0 +1,1 @@
+import{_ as t,i as o,k as s,o as n}from"./index-DSX0wuOK.js";const c={},r={class:"w-full min-h-screen flex items-center justify-center"};function a(l,e){return n(),o("div",r,e[0]||(e[0]=[s("h1",null,"Welcome to the About Page",-1)]))}const i=t(c,[["render",a]]);export{i as default};
