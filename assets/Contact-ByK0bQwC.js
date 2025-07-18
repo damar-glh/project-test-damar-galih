@@ -1,1 +1,0 @@
-import{_ as t,i as n,k as o,o as s}from"./index-BGcV6pSH.js";const c={},r={class:"w-full min-h-screen flex items-center justify-center"};function a(l,e){return s(),n("div",r,e[0]||(e[0]=[o("h1",null,"Welcome to the Contact Page",-1)]))}const i=t(c,[["render",a]]);export{i as default};

@@ -1,1 +1,0 @@
-import{_ as t,i as o,k as s,o as r}from"./index-BGcV6pSH.js";const n={},c={class:"w-full min-h-screen flex items-center justify-center"};function a(l,e){return r(),o("div",c,e[0]||(e[0]=[s("h1",null,"Welcome to the Work Page",-1)]))}const i=t(n,[["render",a]]);export{i as default};

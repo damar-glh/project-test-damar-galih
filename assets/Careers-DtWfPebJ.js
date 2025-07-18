@@ -1,0 +1,1 @@
+import{_ as s,i as t,k as r,o as n}from"./index-DUBBeWEa.js";const o={},c={class:"w-full min-h-screen flex items-center justify-center"};function a(l,e){return n(),t("div",c,e[0]||(e[0]=[r("h1",null,"Welcome to the Careers Page",-1)]))}const i=s(o,[["render",a]]);export{i as default};
