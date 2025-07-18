@@ -3,7 +3,7 @@ version: '3.8'
 services:
   project-test-frontend:
     build:
-      context: ./project-test
+      context: .
       dockerfile: Dockerfile
     container_name: project-test-frontend
     expose:
