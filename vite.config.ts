@@ -11,14 +11,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     },
     extensions: ['.ts', '.js', '.vue', '.json']
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://suitmedia-backend.suitdev.com/',
-        changeOrigin: true,
-        rewrite: (path) => path,
-      },
-    }
   }
+  // because deploy to vercel, we need to set off proxy
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://suitmedia-backend.suitdev.com/',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path,
+  //     },
+  //   }
+  // }
 })
